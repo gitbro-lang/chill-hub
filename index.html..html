@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07152f">
+<title>Chill Hub | Cloud Play</title>
+<style>
+:root{color-scheme:dark;--bg:#061126;--panel:#0b1e3d;--line:#173c69;--cyan:#58e6ff;--blue:#397cff;--muted:#a8bddb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#103b72 0,transparent 42%),var(--bg);color:#f5f9ff;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(18px,5vw,64px);border-bottom:1px solid #173456;background:#061126cc;position:sticky;top:0;backdrop-filter:blur(12px);z-index:2}
+.logo{font-weight:900;letter-spacing:.4px;font-size:1.25rem}.logo span{color:var(--cyan)}nav{display:flex;gap:18px}a{color:inherit;text-decoration:none}nav a{color:var(--muted);font-size:.92rem}
+main{max-width:1120px;margin:auto;padding:48px 20px 72px}.hero{padding:32px 0 40px;max-width:720px}.eyebrow{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:.75rem;font-weight:800}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-2px;margin:12px 0 18px}.glow{color:var(--cyan);text-shadow:0 0 28px #58e6ff44}.intro{color:var(--muted);font-size:1.08rem;max-width:600px}
+.notice{border:1px solid #225081;background:#0b2344;border-radius:14px;padding:14px 16px;color:#c9dcf7;font-size:.92rem;margin:22px 0 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:20px 0}.section-head h2{margin:0;font-size:1.45rem}.section-head p{color:var(--muted);margin:4px 0 0;font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(145deg,#0d2446,#08172e);border:1px solid var(--line);border-radius:20px;padding:22px;min-height:225px;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 16px 45px #0002}
+.symbol{height:48px;width:48px;display:grid;place-items:center;border-radius:14px;background:#12345a;color:var(--cyan);font-weight:900;font-size:1.3rem;margin-bottom:16px}.card h3{margin:0 0 7px;font-size:1.15rem}.card p{margin:0 0 20px;color:var(--muted);font-size:.92rem;flex:1}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:11px;background:linear-gradient(100deg,var(--blue),#168fdb);color:white;font-weight:800;padding:12px 16px;min-height:44px;cursor:pointer;width:100%}.btn:hover{filter:brightness(1.12)}.btn.secondary{background:#10294a;border:1px solid #2b527c}
+.small{font-size:.82rem;color:var(--muted);margin-top:22px}footer{border-top:1px solid #173456;padding:22px;text-align:center;color:#819bbd;font-size:.82rem}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.card{min-height:0}header{padding:16px 18px}nav{gap:12px}nav a{font-size:.82rem}main{padding-top:28px}.hero{padding-top:18px}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="#"><span>CHILL</span> HUB</a><nav><a href="#play">Play</a><a href="#about">About</a></nav></header>
+<main>
+<section class="hero">
+<div class="eyebrow">Your browser. Your next game.</div>
+<h1>Less waiting.<br><span class="glow">More playing.</span></h1>
+<p class="intro">A simple launchpad for browser-based cloud gaming. Pick a service and stream supported games without installing a PC game client.</p>
+<div class="notice"><strong>Heads up:</strong> these buttons open the official gaming services. Chill Hub does not host game servers itself. Actual streaming depends on each provider, your account, game availability, and network.</div>
+</section>
+<section id="play">
+<div class="section-head"><div><h2>Launch cloud gaming</h2><p>Choose a service to get started</p></div></div>
+<div class="grid">
+<article class="card"><div class="symbol">X</div><h3>Xbox Cloud Gaming</h3><p>Stream supported Xbox titles in a compatible browser. A subscription or account may be required for some games.</p><a class="btn" href="https://www.xbox.com/play" target="_blank" rel="noopener noreferrer">Open Xbox Cloud Gaming ↗</a></article>
+<article class="card"><div class="symbol">G</div><h3>GeForce NOW</h3><p>Stream supported PC games from the cloud. Availability depends on the game, region, and membership.</p><a class="btn" href="https://play.geforcenow.com/" target="_blank" rel="noopener noreferrer">Open GeForce NOW ↗</a></article>
+<article class="card"><div class="symbol">R</div><h3>Roblox</h3><p>Open the official Roblox site to check available browser play options and supported experiences.</p><a class="btn" href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer">Open Roblox ↗</a></article>
+</div>
+</section>
+<section id="about" style="margin-top:44px">
+<div class="section-head"><div><h2>About Chill Hub</h2><p>A clean starting point for cloud play on phones, laptops, and Chromebooks.</p></div></div>
+<div class="notice">Want gameplay embedded directly inside Chill Hub? That requires an approved provider integration, plus any required account credentials and domain approval. A normal website page cannot create cloud gaming servers by itself.</div>
+<p class="small">Tip: use a stable Wi‑Fi connection and check your school's device and network rules before gaming on a managed Chromebook.</p>
+</section>
+</main>
+<footer>CHILL HUB · Independent project · Not affiliated with Xbox, NVIDIA, or Roblox</footer>
+</body>
+</html>
