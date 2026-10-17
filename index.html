@@ -45,5 +45,55 @@ h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;letter-spacing:-2px;margin:
 </section>
 </main>
 <footer>CHILL HUB · Independent project · Not affiliated with Xbox, NVIDIA, or Roblox</footer>
+<section style="padding:25px;color:white;font-family:Arial;background:#061126">
+<h2>🎮 Chill Arcade</h2>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<button onclick="game('click')">Click Challenge</button>
+<button onclick="game('guess')">Guess Number</button>
+<button onclick="game('reaction')">Reaction Test</button>
+</div>
+<div id="arcade" style="margin-top:20px;padding:20px;background:#102447;border-radius:15px">
+Pick a game to play
+</div>
+</section>
+<script>
+function game(type){
+let a=document.getElementById('arcade');
+if(type==='click'){
+a.innerHTML='Click the button as many times as u can!<p id="score">Score: 0</p><button onclick="document.getElementById(\'score\').textContent=\'Score: \'+(++window.sc)">CLICK ME</button>';
+window.sc=0;
+}
+if(type==='guess'){
+window.answer=Math.floor(Math.random()*10)+1;
+a.innerHTML='Guess a number from 1 to 10<p><input id="num" type="number" min="1" max="10"><button onclick="document.getElementById(\'result\').textContent=Number(document.getElementById(\'num\').value)===window.answer?'Correct!':'Try again!'">Guess</button></p><p id="result"></p>';
+}
+if(type==='reaction'){
+a.innerHTML='<button id="react" style="padding:20px" onclick="react()">Start reaction test</button><p id="result"></p>';
+window.ready=false;
+window.started=0;
+}
+}
+function react(){
+let b=document.getElementById('react');
+if(!window.ready){
+b.textContent='WAIT...';
+window.ready=true;
+window.started=Date.now();
+b.onclick=()=>{
+if(Date.now()-window.started<1000){
+document.getElementById('result').textContent='Too early! Try again';
+}else{
+document.getElementById('result').textContent='Your reaction: '+(Date.now()-window.started)+' ms';
+}
+};
+setTimeout(()=>{
+if(window.ready){
+window.started=Date.now();
+b.textContent='TAP NOW!';
+}
+},1500);
+}
+}
+</script>  
 </body>
 </html>
